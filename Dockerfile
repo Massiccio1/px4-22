@@ -1,4 +1,4 @@
-FROM osrf/ros:humble-desktop-full as stage1
+FROM ros:humble as stage1
 
 SHELL ["/bin/bash", "-c"]
 
