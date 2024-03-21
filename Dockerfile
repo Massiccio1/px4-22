@@ -73,6 +73,7 @@ COPY ./config.py /root/ros2_ws/src/px4-py/src/config.py
 
 
 COPY .bashrc /root/.bashrc
+RUN mkdir -p /root/shared
 
 RUN source /root/.bashrc
 

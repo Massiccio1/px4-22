@@ -111,9 +111,9 @@ alias r2all="sim & agent & r2path & /bin/python3 /home/massimo/ros2_ws/src/px4-p
 alias camera="ros2 launch realsense2_camera rs_launch.py"
 
 
-alias bag="ros2 bag  record /fmu/out/vehicle_odometry /camera/color/image_raw /camera/depth/image_rect_raw"
+alias bag="cd /home/rock/shared ros2 bag  record /fmu/out/vehicle_odometry /camera/color/image_raw /camera/depth/image_rect_raw"
 alias bag2="ros2 bag  record /optiTrack/pose /camera/color/image_raw /camera/depth/image_rect_raw"
-alias realsense="ros2 launch realsense2_camera rs_launch.py depth_module.profile:=640x480x2 rgb_camera.profile:=640x480x2"
+alias realsense="cd && cd shared && ros2 launch realsense2_camera rs_launch.py depth_module.profile:=640x480x2 rgb_camera.profile:=640x480x2"
 
 alias opti="TRACKED_ROBOT_ID=44 ros2 run optitrack_interface optitrack"
 alias opti20="TRACKED_ROBOT_ID=20 ros2 run optitrack_interface optitrack"
