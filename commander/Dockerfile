@@ -118,6 +118,8 @@ RUN apt-get update && \
 ENV TERM xterm
 # Install NOVNC.
 
+RUN echo breakpoint
+
 WORKDIR /root
 
 RUN     git clone --branch v1.2.0 --single-branch https://github.com/novnc/noVNC.git /opt/noVNC; \
@@ -140,14 +142,14 @@ WORKDIR /root
 
 COPY . .
 
-
+RUN chmod 777 entrypoint.sh
 COPY .bashrc /root/.bashrc
 RUN mkdir -p /root/shared
 
 RUN echo "alias python='python3'">> /root/.bashrc
-
+RUN cp /usr/bin/python3 /usr/bin/python
 RUN source /root/.bashrc
 
-CMD [ "/bin/bash" ]
-# CMD [ "entrypoint.sh" ]
+#CMD [ "/bin/bash" ]
+CMD [ "./entrypoint.sh" ]
 
