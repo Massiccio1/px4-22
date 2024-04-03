@@ -77,5 +77,12 @@ RUN mkdir -p /root/shared
 
 RUN source /root/.bashrc
 
-CMD [ "/bin/bash" ]
+
+COPY . .
+
+RUN chmod 777 entrypoint.sh
+
+#CMD [ "/bin/bash" ]
+CMD [ "./entrypoint.sh" ]
+
 

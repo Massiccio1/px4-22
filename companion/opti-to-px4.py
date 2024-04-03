@@ -6,7 +6,7 @@ from geometry_msgs.msg import PoseStamped
 from rclpy import qos
 
 
-import config
+import companion.config as config
 import random
 import logging
 
