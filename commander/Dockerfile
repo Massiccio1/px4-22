@@ -150,6 +150,6 @@ RUN echo "alias python='python3'">> /root/.bashrc
 RUN cp /usr/bin/python3 /usr/bin/python
 RUN source /root/.bashrc
 
-CMD [ "/bin/bash" ]
-#CMD [ "./entrypoint.sh" ]
+#CMD [ "/bin/bash" ]
+CMD [ "./entrypoint.sh" ]
 
