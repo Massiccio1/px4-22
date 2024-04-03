@@ -25,7 +25,7 @@ WORKDIR /root
 FROM stage1 as px4
 
 RUN git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
-WORKDIR /rootMicro-XRCE-DDS-Agent
+WORKDIR /root/Micro-XRCE-DDS-Agent
 RUN mkdir build
 WORKDIR /root/Micro-XRCE-DDS-Agent/build
 RUN cmake ..
@@ -47,7 +47,7 @@ RUN git clone https://github.com/PX4/px4_ros_com.git
 
 FROM stage2 as realsense
 # RUN git clone https://github.com/IntelRealSense/realsense-ros.git
-RUN apt install -y ros-$ROS_DISTRO-librealsense2-
+RUN apt install -y ros-$ROS_DISTRO-librealsense2-*
 RUN apt-get install -y ros-humble-realsense2-camera
 
 WORKDIR /root/ros2_ws
