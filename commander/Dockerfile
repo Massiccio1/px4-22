@@ -47,7 +47,7 @@ RUN git clone https://github.com/PX4/px4_ros_com.git
 
 FROM stage2 as realsense
 # RUN git clone https://github.com/IntelRealSense/realsense-ros.git
-RUN apt install -y ros-$ROS_DISTRO-librealsense2-
+RUN apt install -y ros-$ROS_DISTRO-librealsense2-*
 RUN apt-get install -y ros-humble-realsense2-camera
 
 WORKDIR /root/ros2_ws
