@@ -42,8 +42,10 @@ WORKDIR /root/ros2_ws/src
 RUN  source /opt/ros/humble/setup.bash
 
 RUN git clone https://github.com/Massiccio1/optitrack_interface.git
-RUN git clone -b release/v1.14 --single-branch https://github.com/PX4/px4_msgs.git
-RUN git clone -b release/v1.14 --single-branch https://github.com/PX4/px4_ros_com.git
+RUN git clone --no-checkout  https://github.com/PX4/px4_msgs.git
+RUN cd px4_msgs && git checkout release/1.14
+RUN git clone --no-checkout  https://github.com/PX4/px4_ros_com.git
+RUN cd px4_ros_com && git checkout release/v1.14
 
 FROM stage2 as realsense
 # RUN git clone https://github.com/IntelRealSense/realsense-ros.git
