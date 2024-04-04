@@ -29,7 +29,7 @@ WORKDIR /root/Micro-XRCE-DDS-Agent
 RUN mkdir build
 WORKDIR /root/Micro-XRCE-DDS-Agent/build
 RUN cmake ..
-RUN make -j4
+RUN make -j6
 RUN make install
 RUN ldconfig /usr/local/lib/
 
