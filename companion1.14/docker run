@@ -1,0 +1,6 @@
+docker build -t drone-humble --platform linux/amd64,linux/arm64/v8 .
+# docker run -it --network host --device /dev/ttyS2 drone-humble 
+
+#be sure to mount all video devices from camera and serial port to px4 flight controller
+docker run -it --network host --device /dev/ttyS2 --device /dev/video2 --device /dev/video3 --device /dev/video4 --device /dev/video5 --device /dev/video6 --device /dev/video7 -v $HOME/shared:/root/shared drone-humble 
+docker run -it --network host --device /dev/ttyS2 -v $HOME/shared:/root/shared drone-humble 
