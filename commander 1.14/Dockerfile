@@ -51,7 +51,7 @@ RUN apt install -y ros-$ROS_DISTRO-librealsense2-*
 RUN apt-get install -y ros-humble-realsense2-camera
 
 WORKDIR /root/ros2_ws
-RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install
+RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install --parallel-workers 6
 
 
 # -------------------------------------------------------------------------------------------------------
