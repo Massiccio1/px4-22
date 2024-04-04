@@ -120,6 +120,7 @@ alias opti20="TRACKED_ROBOT_ID=20 ros2 run optitrack_interface optitrack"
 alias p3opti-to.px4="python3 ~/ros2_ws/src/px4-py/src/opti-to-px4.py"
 
 
+alias bag2='cd  ~/shared/ && ros2 bag  record /optiTrack/pose /camera/color/image_raw /camera/depth/image_rect_raw'
 
 
 alias agentreal3000000="sudo MicroXRCEAgent serial --dev /dev/ttyS2 -b 3000000"
