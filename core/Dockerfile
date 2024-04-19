@@ -8,10 +8,10 @@ ENV TZ="Europe/Rome"
 RUN apt-get update
 
 # install ros package
-RUN apt-get update && apt-get install -y \
-    ros-${ROS_DISTRO}-desktop \
-    ros-${ROS_DISTRO}-demo-nodes-cpp \
-    ros-${ROS_DISTRO}-demo-nodes-py 
+RUN apt-get update
+RUN apt-get install -y  ros-${ROS_DISTRO}-desktop 
+RUN apt-get install -y  ros-${ROS_DISTRO}-demo-nodes-cpp 
+RUN apt-get install -y  ros-${ROS_DISTRO}-demo-nodes-py 
 
 RUN apt install -y ros-dev-tools 
 RUN apt install -y git
