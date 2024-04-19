@@ -8,7 +8,8 @@ ENV TZ="Europe/Rome"
 RUN apt-get update
 
 # install ros package
-RUN apt-get update && apt-install -y nala
+RUN apt-get update
+RUN apt-get install -y nala
 RUN nala update
 RUN nala install -y  ros-${ROS_DISTRO}-desktop 
 RUN nala install -y  ros-${ROS_DISTRO}-demo-nodes-cpp 
