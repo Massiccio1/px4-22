@@ -8,6 +8,7 @@ ENV TZ="Europe/Rome"
 RUN apt-get update
 
 # install ros package
+RUN sed -i 's|http://ports.ubuntu.com|http://mirrors.mit.edu|g' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y nala
 RUN nala update
