@@ -8,11 +8,11 @@ ENV TZ="Europe/Rome"
 RUN apt-get update
 
 # install ros package
-RUN apt-get update
-RUN apt-get install -y  ros-${ROS_DISTRO}-desktop 
-RUN apt-get install -y  ros-${ROS_DISTRO}-demo-nodes-cpp 
-RUN apt-get install -y  ros-${ROS_DISTRO}-demo-nodes-py 
-
+RUN apt-get update && apt-install -y nala
+RUN nala update
+RUN nala install -y  ros-${ROS_DISTRO}-desktop 
+RUN nala install -y  ros-${ROS_DISTRO}-demo-nodes-cpp 
+RUN nala install -y  ros-${ROS_DISTRO}-demo-nodes-py 
 RUN apt install -y ros-dev-tools 
 RUN apt install -y git
 RUN apt install -y python3-pip
