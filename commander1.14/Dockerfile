@@ -1,4 +1,4 @@
-FROM drone-core as core
+FROM drone-core:1.14 as core
 
 
 FROM core as commander

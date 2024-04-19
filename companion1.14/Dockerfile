@@ -1,4 +1,4 @@
-FROM drone-core as stage1
+FROM drone-core:1.14 as stage1
 
 
 COPY .bashrc /root/.bashrc
