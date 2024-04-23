@@ -61,11 +61,11 @@ RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install --parall
 
 # -------------------------------------------------------------------------------------------------------
 
-RUN touch src/optitrack_interface/COLCON_IGNORE 
-RUN touch src/px4_msgs/COLCON_IGNORE 
-RUN touch src/px4_ros_com/COLCON_IGNORE
-RUN touch src/px4-py/COLCON_IGNORE
-# RUN touch src/realsense-ros/COLCON_IGNORE 
+# RUN touch src/optitrack_interface/COLCON_IGNORE 
+# RUN touch src/px4_msgs/COLCON_IGNORE 
+# RUN touch src/px4_ros_com/COLCON_IGNORE
+# RUN touch src/px4-py/COLCON_IGNORE
+# # RUN touch src/realsense-ros/COLCON_IGNORE 
 
 
 FROM realsense as finish
