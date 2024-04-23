@@ -7,13 +7,14 @@ WORKDIR /root/ros2_ws/src
 
 
 RUN rm -rf px4-py
+RUN true
 RUN git clone https://github.com/Massiccio1/commander_msg.git
 RUN git clone https://github.com/Massiccio1/px4-py.git
 RUN git clone https://github.com/Massiccio1/px4-offboard.git
 
 
 WORKDIR /root/ros2_ws
-RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install
+RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install --parallel-workers 8
 
 RUN pip install PySimpleGUI==4.60.5
 
