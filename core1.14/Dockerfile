@@ -43,6 +43,8 @@ WORKDIR /root/ros2_ws/src
 
 RUN  source /opt/ros/humble/setup.bash
 
+RUN true
+
 RUN git clone https://github.com/Massiccio1/px4-py.git
 RUN git clone https://github.com/Massiccio1/optitrack_interface.git
 RUN git clone --no-checkout  https://github.com/PX4/px4_msgs.git
