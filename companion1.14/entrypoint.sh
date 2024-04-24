@@ -9,7 +9,7 @@ function ctrl_c() {
         exit 0
 }
 
-source ~/.bashrc ; source /opt/ros/humble/setup.bash ; source ~/ros2_ws/install/setup.bash ; true
+source ~/.bashrc ; source /opt/ros/humble/setup.bash ; source ~/ros2_ws/install/setup.bash ; source ~/ros2_ws/install/local_setup.bash ; true
 TRACKED_ROBOT_ID=44 ros2 run optitrack_interface optitrack &
 python3 ~/ros2_ws/src/px4-py/src/opti-to-px4.py &
 

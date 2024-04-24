@@ -85,6 +85,9 @@ WORKDIR /root/ros2_ws/src
 RUN cd px4_msgs && git checkout release/1.14
 RUN rm -rf px4_ros_com
 
+RUN rm -rf px4_msgs
+RUN git clone https://github.com/Massiccio1/px4_msgs.git
+
 WORKDIR /root/ros2_ws
 RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install --parallel-workers 8
 
