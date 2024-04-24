@@ -15,6 +15,7 @@ RUN git clone https://github.com/Massiccio1/px4-offboard.git
 
 WORKDIR /root/ros2_ws
 RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install
+#--allow-overriding px4_msgs
 
 RUN pip install PySimpleGUI==4.60.5
 
