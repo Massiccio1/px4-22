@@ -1,7 +1,7 @@
 FROM drone-commander:main-squash
 
 WORKDIR /root/ros2_ws/src/
-RUN cd commander_msg ; git fetch ; git reset --hard origin/master
+RUN cd optitrack_interface ; git fetch ; git reset --hard origin/master
 
 WORKDIR /root/ros2_ws/src/
 RUN cd px4-py ; git fetch ; git reset --hard origin/master
