@@ -119,7 +119,6 @@ alias p3launch="python3 ~/ros2_ws/src/px4-py/src/px4-py.py"
 alias p3hb="python3 ~/ros2_ws/src/px4-py/src/hb.py"
 alias camera="ros2 launch realsense2_camera rs_launch.py depth_module.profile:=640x480x10 rgb_camera.profile:=640x480x10"
 alias slam="cd ~/ros2_ws && ros2 run orbslam3 rgbd src/orbslam3_ros2/vocabulary/ORBvoc.txt src/orbslam3_ros2/config/rgb-d/TUM1.yaml"
-alias r2all="sim & agent & r2path & /bin/python3 /home/massimo/ros2_ws/src/px4-py/src/px4-py.py"
 
 alias opti="TRACKED_ROBOT_ID=44 ros2 run optitrack_interface optitrack"
 alias opti20="TRACKED_ROBOT_ID=20 ros2 run optitrack_interface optitrack"

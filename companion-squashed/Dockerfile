@@ -1,4 +1,4 @@
-FROM drone-core:main-squash as px4
+FROM drone-core as px4
 
 
 COPY .bashrc /root/.bashrc

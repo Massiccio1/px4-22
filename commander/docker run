@@ -1,9 +1,4 @@
 
-
-
-
-
-
 docker build -t commander-humble .
 
 xhost + && docker run -it --network host -e DISPLAY=$DISPLAY -v $HOME/shared:/root/shared -v /tmp/.X11-unix:/tmp/.X11-unix commander-humble && xhost -

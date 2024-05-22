@@ -107,7 +107,6 @@ alias rtl="ros2 topic list"
 alias r2launch="ros2 run offboard_controller offboard_controller"
 alias r2path="ros2 launch px4_offboard visualize.launch.py"
 
-alias r2all="sim & agent & r2path & /bin/python3 /home/massimo/ros2_ws/src/px4-py/src/px4-py.py"
 alias camera="ros2 launch realsense2_camera rs_launch.py"
 
 

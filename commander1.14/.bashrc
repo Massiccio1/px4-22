@@ -96,8 +96,6 @@ alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias gbrc="gedit $HOME/.bashrc && source $HOME/.bashrc && source $HOME/.bashrc"
-
 alias s="source ~/.bashrc ; source /opt/ros/humble/setup.bash ; source ~/ros2_ws/install/setup.bash"
 
 alias gitlog="git log --graph --decorate"
@@ -105,11 +103,10 @@ alias gitlog="git log --graph --decorate"
 alias cdrw="cd ~/ros2_ws"
 alias cdrws="cd ~/ros2_ws/src"
 alias sim="cd ~/PX4-Autopilot && make px4_sitl gazebo-classic"
-alias simw="cd ~/PX4-Autopilot && make px4_sitl gazebo-classic_windy"
 alias simh="cd ~/PX4-Autopilot && HEADLESS=1 make px4_sitl gazebo-classic"
 alias agent="cd ~/Micro-XRCE-DDS-Agent && MicroXRCEAgent udp4 -p 8888"
 alias rtl="ros2 topic list"
-alias r2launch="ros2 run offboard_controller offboard_controller"
+alias rte="ros2 topic echo"
 alias r2path="ros2 launch px4_offboard visualize.launch.py"
 alias r2path100="RVIZ_MAX_BUFFER=100 ros2 launch px4_offboard visualize.launch.py"
 alias r2path1000="RVIZ_MAX_BUFFER=1000 ros2 launch px4_offboard visualize.launch.py"
@@ -117,32 +114,19 @@ alias r2path1000="RVIZ_MAX_BUFFER=1000 ros2 launch px4_offboard visualize.launch
 alias p3gui="python3 ~/ros2_ws/src/px4-py/src/gui.py"
 alias p3launch="python3 ~/ros2_ws/src/px4-py/src/px4-py.py"
 alias p3hb="python3 ~/ros2_ws/src/px4-py/src/hb.py"
-alias camera="ros2 launch realsense2_camera rs_launch.py depth_module.profile:=640x480x10 rgb_camera.profile:=640x480x10"
-alias slam="cd ~/ros2_ws && ros2 run orbslam3 rgbd src/orbslam3_ros2/vocabulary/ORBvoc.txt src/orbslam3_ros2/config/rgb-d/TUM1.yaml"
-alias r2all="sim & agent & r2path & /bin/python3 /home/massimo/ros2_ws/src/px4-py/src/px4-py.py"
 
 alias opti="TRACKED_ROBOT_ID=44 ros2 run optitrack_interface optitrack"
-alias opti20="TRACKED_ROBOT_ID=20 ros2 run optitrack_interface optitrack"
-alias slam="ros2 run orbslam3 rgbd src/orbslam3_ros2/vocabulary/ORBvoc.txt src/orbslam3_ros2/config/rgb-d/TUM1.yaml"
+alias opti2="TRACKED_ROBOT_ID=44 ros2 run optitrack_interface optitrack2"
 
 alias sshr4c="ssh rock@rock-4c-plus.local"
 alias sshr4c2="ssh rock@192.168.1.43"
 
+alias dockercommander="xhost + && docker run --rm -it --network host -e DISPLAY=$DISPLAY -v $HOME/shared:/root/shared -v /tmp/.X11-unix:/tmp/.X11-unix drone-commander:main-squash ; xhost -"
+alias dockercommander2="xhost + && docker run --rm -it --network host -e DISPLAY=$DISPLAY -v $HOME/shared:/root/shared -v /tmp/.X11-unix:/tmp/.X11-unix drone-commander:main-squash bash"
 
-alias p3opti-to.px4="python3 ~/ros2_ws/src/px4-py/src/opti-to-px4.py"
 
-alias code="code --disable-gpu"
-alias ccbsi="cd ~/ros2_ws && colcon build --symlink-install"
+alias ccbsi="cd ~/ros2_ws && colcon build --symlink-install --parallel-workers 8"
 
-alias l='ll'
-alias gs='git status'
-alias gl='git log --graph --all'
-alias rm='rm -vR'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
 
 
 

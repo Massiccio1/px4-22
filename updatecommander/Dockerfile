@@ -9,7 +9,8 @@ RUN cd px4-py ; git fetch ; git reset --hard origin/master
 WORKDIR /root/ros2_ws
 RUN source /opt/ros/humble/setup.bash && colcon build --symlink-install --parallel-workers 8
 
+WORKDIR /root
+
 
 
 CMD [ "./entrypoint.sh" ]
-

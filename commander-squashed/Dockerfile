@@ -1,4 +1,4 @@
-FROM drone-core:main-squash as core
+FROM drone-core as core
 
 FROM core as commander
 
